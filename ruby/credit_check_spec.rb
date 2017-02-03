@@ -1,4 +1,4 @@
-require_relative 'check_credit'
+require_relative 'credit_check'
 
 puts check_credit('5541808923795240') == "The number is valid!"
 puts check_credit("4024007136512380") == "The number is valid!"
