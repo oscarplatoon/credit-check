@@ -4,7 +4,7 @@ card_number = "4929735477250543"
 
 valid = false
 
-def check_credit
+def credit_check
 
 end
 
