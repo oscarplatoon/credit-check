@@ -1,4 +1,4 @@
-def credit_check
+def check_credit
 
 end
 
