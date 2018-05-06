@@ -21,13 +21,13 @@ The formula verifies a number against its included check digit, which is usually
 
 #### Validating an Account Number
 
-We can use the same process to validate an account number. Using `79927398713` as our sample input:
+We can use the same process to validate an account number. Using `5541808923795240` as our sample input:
 
 ```
-Account identifier:    7   9   9   2   7   3   9   8   7   1   3
-2x every other digit:  7   18  9   4   7   6   9   16  7   2   3
-Summed digits over 10: 7   9   9   4   7   6   9   7   7   2   3
-Results summed:        7   9   9   4   7   6   9   7   7   2   3 = 70
+Account identifier:    5   5   4   1   8   0   8   9   2   3   7   9   5   2   4   0
+2x every other digit:  10  5   8   1   16  0   16  9   4   3   14  9   10  2   8   0
+Summed digits over 10: 1   5   8   1   7   0   7   9   4   3   5   9   1   2   8   0
+Results summed:        1   5   8   1   7   0   7   9   4   3   5   9   1   2   8   0 = 70
 ```
 
 Since the summed results modulo 10 is zero, the account number is valid according to the algorithm.
