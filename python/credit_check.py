@@ -1,4 +1,5 @@
-def check_credit(str):
+def credit_check(str):
+    pass
 
 # Your Luhn Algorithm Here
 # Expected Output:
