@@ -1,2 +1,2 @@
-exports.checkCredit = function(str) {
+exports.creditCheck = function(str) {
 }
