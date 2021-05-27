@@ -1,12 +1,16 @@
 # import numpy as np
 
 def credit_check(str):
+    CREDIT_LENGTH = 16
 
     # Check credit length: 16
+    credit_len = len(str)
 
-    str_arr = []
+    if (CREDIT_LENGTH != credit_len):
+        return ('The credit number length is invalid!', credit_len)
 
     # Seperating into single string
+    str_arr = []
     for i in (str):
         # print(i)
         str_arr.append(i)
@@ -42,5 +46,3 @@ def credit_check(str):
 # Expected Output:
 # If it is valid, print "The number is valid!"
 # If it is invalid, print "The number is invalid!"
-
-# print(credit_check('5541808923795240'))
