@@ -6,23 +6,40 @@
 # function that takes in str of numbers
 # turn string into list of individual numbers
 
+def credit_check(str):
+    list_of_str = list(str)
+# convert str list into number list
+    list_of_int = list(map(int,list_of_str))
 # 2x every other digit starting from right_most_digit
-
-# remove all digits greater than 10
-
-# sum up remains digits
-
+    times_every_other_list = [x*2 if index % 2 == 0 else x for index, x in enumerate(list_of_int)]
+# make new list with summed >= 10 numbers
+# probably a way smoother and efficient way of doing this...
+    sum_over_10_list = []
+    for x in times_every_other_list:
+        if x >= 10:
+            total = 0
+            while x > 0:
+                rem = x % 10
+                total += rem
+                x = int(x/10)
+            sum_over_10_list.append(total)
+        else:
+            sum_over_10_list.append(x)
+# sum up list
+    sum = 0
+    for x in sum_over_10_list:
+        sum += x
 # if sum == 70 return 'The number is valid!'
+    if sum == 70:
+        return 'The number is valid!'
 
 # if sum does not == 70 return 'The number is invalid!'
-
-
-
-def credit_check(str):
-    pass
+    else:
+        return 'The number is invalid!'
 
 # Your Luhn Algorithm Here
 # Expected Output:
 # If it is valid, print "The number is valid!"
 # If it is invalid, print "The number is invalid!"
 
+# print(credit_check('5541808923795240'))
